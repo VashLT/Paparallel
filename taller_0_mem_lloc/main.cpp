@@ -140,12 +140,12 @@ int evaluate_multiplication(int N, std::string mem_type) {
          */
         auto t2 = std::chrono::high_resolution_clock::now();
         /* Getting number of milliseconds as an integer. */
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 
         if (mem_type.compare("malloc") == 0) {
-          cout << "[MALLOC] Runtime: " << duration.count() << " microseconds"<< endl;
+          cout << "[MALLOC] Runtime: " << duration.count() << " milliseconds"<< endl;
         } else {
-          cout << "[NEW] Runtime: " << duration.count() << " microseconds"<< endl;
+          cout << "[NEW] Runtime: " << duration.count() << " milliseconds"<< endl;
         }
     }
     else if (mem_type.compare("vector") == 0)
@@ -163,9 +163,9 @@ int evaluate_multiplication(int N, std::string mem_type) {
          */
         auto t2 = std::chrono::high_resolution_clock::now();
         /* Getting number of milliseconds as an integer. */
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 
-        cout << "[VECTOR] Runtime: " << duration.count() << " microseconds"<< endl;
+        cout << "[VECTOR] Runtime: " << duration.count() << " milliseconds"<< endl;
     }
     else if (mem_type.compare("vector2d") == 0)
     {
@@ -182,9 +182,9 @@ int evaluate_multiplication(int N, std::string mem_type) {
          */
         auto t2 = std::chrono::high_resolution_clock::now();
         /* Getting number of milliseconds as an integer. */
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1);
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 
-        cout << "[VECTOR2D] Runtime: " << duration.count() << " microseconds"<< endl;
+        cout << "[VECTOR2D] Runtime: " << duration.count() << " milliseconds"<< endl;
     }
     else
     {
